@@ -25,6 +25,15 @@ You chose 'false', which is a reasonable choice.
 The point of the exercise is just to give you practice in working with
 predicates and complex conditional expressions.
 
+-----------------------------------------
+String: "hello"
+Image: (rectangle 10 20 "solid" "blue")
+Number 11, -11, 0
+Boolean: false, true
+||
+\/
+-----------------------------------------
+
 |#
 
 (define in ...)
@@ -39,12 +48,10 @@ predicates and complex conditional expressions.
                ;number
                (if (> in 0)
                    (- in 1) ;positive number
-                   (if (<= in 0)
-                       in ;negative number or zero
-                       false))
+                   in) ; negative number or zero
                (if (boolean? in)
                    ;boolean
-                   (if (or in false)
+                   (if in
                        10 ;true
                        20) ;false
 false))))
